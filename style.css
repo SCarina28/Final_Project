@@ -1,0 +1,621 @@
+
+/*
+NAVIGATION MENU / HOME PAGE
+*/
+
+.header {
+    background: #1e3226;
+    clear: both;
+    height: 145px;
+    overflow: hidden;
+    opacity: .9;
+   
+}
+    
+#logo {
+    float:left;
+    margin:0;
+    width: auto;
+    height: 145px;
+    padding-left: 45px;
+    }
+    
+#navlist {
+    float: right;
+    margin: 0;
+}
+ 
+#schoolname {
+    float: left;
+    color: white;
+    font-size: 25pt;
+    font-family: 'Segoe UI';
+    text-align: center;
+    padding-left: 10px;
+    margin-top: 1%; 
+    line-height: 22pt;
+}
+
+#schooladd {
+    font-size: 13pt;
+}
+
+#school {
+    border-bottom: 1px solid white ;
+}
+
+li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    font-family: 'Segoe UI';
+    font-size: 15pt;
+    color: white;
+}
+
+a:link{
+    line-height: 200px;
+    /*height: 100px;*/
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: white;
+
+}
+
+.indexbg {
+    background-image: url(/Website_Exam/img/b5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.bottomm {
+  bottom: 0;
+  width: 100%;
+  color: #001c00;
+  background-color: white;
+  padding: 15px;
+  margin-top: 35%;
+  display: flex;
+}
+
+.containeraa {
+  border: 1px solid white;
+  padding: 15px;
+  width: 40%;
+  /*float: left;*/
+  margin-left: 7%;
+}
+
+.vm {
+  font-family: 'Segoe UI';
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  font-size: 20pt;
+}
+.vmcontent {
+  font-family: 'Segoe UI';
+
+  font-weight: 400;
+  text-align: center;
+  font-size: 11pt;
+}
+
+
+@media screen and (max-width: 494px) {
+    .header {
+        width: 100%;
+        height: 80px;
+    }
+    #logo {
+        width: 20%;
+        height: auto;
+        padding-left: 15px;
+    }
+    #schoolname {
+        font-size: 15pt;
+        line-height: 14pt;
+        float: none;
+    }
+    #schooladd {
+        font-size: 9pt;
+    }
+    #navlist {
+        float: none;
+    }
+   a:link {
+        line-height: unset;
+    }
+    li {
+        font-size: 9pt;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header {
+        width: 100%;
+        height: 120px;
+    }
+    #logo {
+        width: 20%;
+        height: auto;
+    }
+    #schoolname {
+        font-size: 20pt;
+        line-height: 18pt;
+        float: none;
+    }
+    #schooladd {
+        font-size: 10pt;
+
+    }
+    #navlist {
+        float: right;
+    }
+    a:link {
+        line-height: unset;
+    }
+    li {
+        font-size: 13pt;
+        padding-right: 14px;
+    }
+}
+
+
+/*ABOUT*/
+
+* {
+    box-sizing: border-box;
+} 
+.about {
+    margin: 0 auto;
+    background-color: #8a9a5b;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #0f40c6;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #0f40c6;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .left {
+    left: 0;
+  }
+
+  .right {
+    left: 50%;
+  }
+
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .right::after {
+    left: -16px;
+  }
+
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .timeline::after {
+    left: 31px;
+    }
+    
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+ 
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }  
+    .left::after, .right::after {
+    left: 15px;
+    }
+
+    .right {
+    left: 0%;
+    }
+  }
+
+.yr {
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    font-size: 20pt;
+}
+
+.phara {
+    font-family: 'Segoe UI';
+    font-size: 13pt;
+}
+
+/*EVENTS*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .gallery {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery img {
+    height: 250px;
+    width: auto
+    transform: scale(1.0);
+    transition: 0.4s ease;}
+
+  .img {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    background-color: white;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+  }
+
+
+  .box {
+    height: 250px;
+    width: 350px;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .img:hover img { 
+    transform: scale(1.1);
+  }
+
+  .img:hover .box {
+    background-color:rgba(0, 0, 0, 0.5);
+  }
+
+  .img:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+  }
+
+  .img:hover {
+    cursor: pointer;
+  }
+  
+  .caption > p:nth-child(2) {
+    font-size: 0.8em;
+  }
+  
+  .sub {
+    opacity: 0.8;
+    text-transform: none;
+  }
+
+  .eventbox {
+    border: 1px solid white;
+    padding: 10px 10px 10px;
+  }
+
+  .eventimg {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin: 20px 30px 0px 0px;
+  }
+  
+  .text {
+    display: inline-block;
+    width: 46%;
+  }
+
+  .eventimg1 {
+    float: right;
+    width: 40%;
+  }
+
+  .text1 {
+    display: inline;
+    width: 46%;
+  }
+
+  #sevent, #gallerytitle {
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+    font-size: 25pt;
+    color: #001c00;
+    font-weight: 500;
+    text-align: center;
+
+  }
+
+  #einfo {
+    font-family: 'Segoe UI';
+    font-size: 15pt;
+    color: #001c00;
+    text-align: center;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .maintitle {
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+    font-size: 20pt;
+    color: #001c00;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .eventbody {
+    font-family: 'Segoe UI';
+    font-size: 15pt;
+    color: #001c00;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+/*HYMN*/
+
+.hymnbg {
+  
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255,255,255, 0.8)),
+    url('/Website_Exam/img/flag.png');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    color: white;
+}
+#title {
+  font-family: 'Segoe UI';
+    text-transform: uppercase;
+    font-size: 25pt;
+    color: #001c00;
+    font-weight: 500;
+    text-align: center;
+    line-height: 30px;
+}
+
+#nd {
+  text-transform: none;
+  font-size: 12pt;
+}
+
+#lyric {
+  font-family: 'Segoe UI';
+    font-size: 15pt;
+    color: #001c00;
+    text-align: center;
+}
+
+/*CONTACT*/
+
+.contactbg{
+	margin:0px;
+	padding: 0px;
+	background-color: #8a9a5b;
+}
+
+#contact{
+	position: absolute;;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+  align-items: center;
+  margin-top: 20%;
+  padding-bottom: 10%;
+}
+
+.contact-box{
+	background-color: #1e3226 ;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 30px;
+	box-shadow: 2px 0px 30px rgba(0,0,0,0.1);
+}
+.c-heading h1{
+	font-family: Roboto;
+	color: #e7eef3;
+	font-size: 2.5rem;
+	font-weight: lighter;
+	margin: 0px;
+	padding: 0px;
+}
+.c-heading p{
+	font-family: Roboto;
+	color:#cecece;
+	font-size: 0.8rem;
+	font-weight: lighter;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+.c-inputs{
+	margin: 15px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.c-inputs input{
+	width:250px;
+	height: 45px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid rgba(251,251,251,0.1);
+	outline: none;
+	margin: 10px 0px;
+	padding: 10px;
+	box-sizing: border-box;
+	color: #f4f4f4;
+	display: flex;
+}
+.c-inputs textarea{
+	width:250px !important;
+	height: 200px !important;
+	outline: none;
+	background-color: transparent;
+	border:1px solid rgba(82,82,82,1);
+	color: #f4f4f4;
+	padding: 10px;
+	font-size: 1.2rem;
+	box-sizing: border-box;
+}
+.c-inputs button{
+	width:200px;
+	height: 40px;
+	background-color: #FFFFFF;
+	border: none;
+	outline: none;
+	margin-top: 20px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+	letter-spacing: 1px;
+}
+.c-inputs input:focus{
+	border-bottom: 1px solid rgba(252,252,252,1.00);
+	transition: all ease 0.5s;
+}
+.c-inputs textarea:focus{
+	border: none;
+	border-bottom: 1px solid rgba(255,255,255,1.00);
+	transition: all ease 0.5s;
+	background-color: rgba(0,0,0,0.1);
+}
+.c-inputs button:active{
+	transform: scale(1.02);
+}
+.map{
+	filter: grayscale(0.2);
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+	border: 2px solid #FFFFFF;
+}
+@media(max-width:1100px){
+	.map{
+		display: none;
+	}
+}
+@media(max-width:450px){
+	.social{
+		display: none;
+	}
+	.contact-box{
+		width: 100%;
+		height: 100vh;
+		box-sizing: border-box;
+	}
+	#contact{
+		position: static;
+		transform: translate(0,0);
+		width:100%;
+		height: 100vh;
+		box-sizing: border-box;
+	}
+	.c-heading h1{
+		font-size: 2.2rem;
+		text-align: center;
+	}
+	
+}
+
+#tellus{
+  font-family: 'Segoe UI';
+  text-transform: uppercase;
+  font-size: 25pt;
+}
+
+#more {
+  font-family: 'Segoe UI';
+  font-size: 11pt;
+}
